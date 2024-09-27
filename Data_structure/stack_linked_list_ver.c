@@ -28,6 +28,10 @@ void Push(Stack *s,int val){
 }
 
 int Pop(Stack *s){
+    if(isEmpty(s)){
+        printf("Stack is empty!\n");
+        return -1;
+    }
     Node *tmp=s->top;
     int item=tmp->data;
     s->top=s->top->next;
