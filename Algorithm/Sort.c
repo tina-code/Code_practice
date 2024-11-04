@@ -86,10 +86,10 @@ int main(){
         printf("%d ",p[i]);
     }
     printf("\n");
-    //Bubble_sort(nums,arrsize);
-    //Insertion_sort(nums,arrsize);
-    //Selection_sort(nums,arrsize);
-    //Selection_sort_stable_ver(nums,arrsize);
+    Bubble_sort(nums,arrsize);
+    Insertion_sort(nums,arrsize);
+    Selection_sort(nums,arrsize);
+    Selection_sort_stable_ver(nums,arrsize);
     quicksort(nums,0,arrsize-1);
     printf("After sorted!\n");
     for(int i=0;i<arrsize;i++){
