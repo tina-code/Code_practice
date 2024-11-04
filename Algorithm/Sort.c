@@ -30,8 +30,8 @@ void Insertion_sort(int *p,int arrsize){  //Stable Sort(不改變順序)
 }
 
 void Selection_sort(int *p,int arrsize){  //Unstable sort(改變順序)
-    for(int i=0;i<arrsize;i++){
-        int *min=p+i;
+    for(int i=0;i<arrsize;i++){           //原理：從未排序的範圍找最小的跟未排序的第一個位置交換
+        int *min=p+i;                     //每次確認第i個位置是第i小的
         for(int j=i+1;j<arrsize;j++){
             if(*min>p[j]){
                 min=p+j;
@@ -53,8 +53,8 @@ void Selection_sort_stable_ver(int *p,int arrsize){
     }
 }
 
-void quicksort(int *p,int l,int r){
-    if(l<r){
+void quicksort(int *p,int l,int r){  //原理：由左往右找比pivot大的,由右往左找比pivot小的,
+    if(l<r){                         //如果i<j,則做交換,最後交換pivot跟i位置的值
         int key=p[l];
         int i=l,j=r;
         while(i!=j){
